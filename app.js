@@ -19,12 +19,15 @@ function formatAndSendTweet(event) {
             ? 'Ξ' 
             : ` ${tokenSymbol}`
     );
+    
+    if (formattedTokenPrice > 1) {
 
     const tweetText = `${tokenName} bought for ${formattedTokenPrice} ETH #ZedRunSale ${openseaLink}`;
 
     console.log(tweetText);
 
     return tweet.handleDupesAndTweet(tokenName, tweetText, image);
+} 
 }
 
 // Poll OpenSea every minute & retrieve all sales for a given collection in the last minute
