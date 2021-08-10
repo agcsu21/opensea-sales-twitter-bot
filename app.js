@@ -20,7 +20,7 @@ function formatAndSendTweet(event) {
             : ` ${tokenSymbol}`
     );
     
-    if (formattedTokenPrice > 1) {
+    if (formattedTokenPrice > 0.9999) {
 
     const tweetText = `${tokenName} bought for ${formattedTokenPrice} ETH #ZedRunSale ${openseaLink}`;
 
